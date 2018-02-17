@@ -1,0 +1,5 @@
+<% if @diff_percentage != 0.0 %>
+  $('.result').removeClass('text-success').addClass('text-danger').html("Percentage Difference: <%= '%.2f' % @diff_percentage %>");
+<% else %>
+$('.result').removeClass('text-danger').addClass('text-success').html("Both contents are same!");
+<% end %>

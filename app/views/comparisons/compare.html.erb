@@ -1,0 +1,20 @@
+<div class="container">
+  <%= form_tag comparisons_compare_sections_path, remote: true do %>
+    <div class="row">
+      <div class="col-6 pad-a10">
+        <%= text_area_tag 'left_section', @sample_text, class: 'form-control', size: '50x25' %>
+      </div>
+      <div class="col-6 pad-a10">
+        <%= text_area_tag 'right_section', @sample_text, class: 'form-control', size: '50x25' %>
+      </div>
+      <div class="col-12 text-center pad-t10">
+        <%= submit_tag 'Compare Contents', class: 'btn btn-large btn-success compare-btn' %>
+      </div>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="result text-success">
+      Both contents are same!
+    </div>
+  </div>
+</div>
